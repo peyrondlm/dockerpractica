@@ -1,0 +1,12 @@
+name: Docker build
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Mi primer comando
+      run: echo "Hello World"
