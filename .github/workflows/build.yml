@@ -8,5 +8,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name: Mi primer comando
-      run: echo "Hello World"
+      - name: Mi primer comando
+        run: echo "Hello World"
