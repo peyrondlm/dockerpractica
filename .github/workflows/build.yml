@@ -11,5 +11,11 @@ jobs:
       - name: Clonar repositorio
         uses: actions/checkout@v4
 
+      - name: Docker login
+        run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
+
       - name: Construir imagen
-        run: docker build -t node-test:1 .
+        run: docker build -t xxlilmonkeyy/node-test:latest .
+
+      - name: Subir imagen a Docker Hub
+        run: docker push xxlilmonkeyy/node-test:latest
